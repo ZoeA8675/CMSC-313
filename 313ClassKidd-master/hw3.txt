@@ -1,0 +1,11 @@
+All of the programs contain the same commands for pushing, moving, and adding items. When c++ code called for a function, 
+the assembly code ran that function first. All the function ran the same way, and they appeared to be moving memory arround.
+All the function has layers (LFB4, LFE4, L3, etc) that they run through. All the program had the same ending section in which 
+they credited the gcc version and main function. The more functions that were needed for the program, the more assembly code was needed.
+
+One thing I noticed that was different between all the programs was the ammount of data needed to move. addmatsSimple.s needed 
+to move the most memory, despite bieng the most simplest program in c++. addmats.s was the most complicated c++ code compaared to the other 2 
+files because it involved creating a class and multible functions. The assembly code for addmats.s was different than the other 2 files 
+because it had to stop running through the program to compile the class itself before moving on to the functions. It was noted in addmatsSimple.s 
+that the machine identified the main function as a global concept with the command ".globl main" and ".type main @function" before 
+going to main function
