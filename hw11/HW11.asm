@@ -21,6 +21,7 @@ SECTION .text
 global _start
 
 _start:
+
 ;define the counters for input(ESI), output(EDI), and the loop specifically(ECX)
     XOR ESI, ESI 
     XOR EDI, EDI 
@@ -28,6 +29,7 @@ _start:
 
 ; .loop sets up the loop to be preformed 8 times for each bit(ECX = 8)
 .loop:
+
     ;load input into AL and save a backup of the input into AH for converting the lower number (the 6 in 86)
     MOV AL, [inputBuf + ESI]
     MOV AH, AL
@@ -54,7 +56,7 @@ _start:
     MOV [outputBuf + EDI], AL
     INC EDI
 
-    ;Lines 59-62 adds a space between 2 chracters(1 byte) and finish loop
+    ;Lines 59-62 adds a space between 2 chracters(1 byte) and finishes loop AKA stops loop after being run 8 times
     MOV BYTE [outputBuf + EDI], ' '
     INC EDI
     INC ESI
