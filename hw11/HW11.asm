@@ -56,7 +56,7 @@ _start:
     MOV [outputBuf + EDI], AL
     INC EDI
 
-    ;Lines 59-62 adds a space between 2 chracters(1 byte) and finishes loop AKA stops loop after being run 8 times.
+    ;Lines 59-62 adds a space between 2 chracters(1 byte) and uses LOOP command to preform loop using ECX counter.
     ;NOTE: incrementing EDI adds the space to the output, while incrementing ESI goes to the next digit in the input.
     MOV BYTE [outputBuf + EDI], ' '
     INC EDI
